@@ -1,0 +1,38 @@
+Basic Slice Notation (a list, string, or tuple)
+a[start:stop]   Returns a slice from the start index to the stop index (excluding stop).
+a[start:]       Returns a slice from the start index to the end of the sequence.
+a[:stop]        Returns a slice from the beginning of the sequence to the stop index (excluding stop).
+a[:]            Returns a copy of the entire sequence.
+
+
+Examples
+Given a list a = [0, 1, 2, 3, 4, 5]:
+
+a[1:]       returns [1, 2, 3, 4, 5]     (from index 1 to the end).
+a[:3]       returns [0, 1, 2]           (from the beginning to index 3, excluding 3).
+a[2:4]      returns [2, 3]              (from index 2 to index 4, excluding 4).
+a[:]        returns [0, 1, 2, 3, 4, 5]  (a copy of the entire list).
+
+
+Step Value
+You can also include a step value to specify the interval between elements:
+
+a[start:stop:step]      Returns a slice from the start index to the stop index, with a step of step.
+
+Examples with Step
+a[::2]          returns [0, 2, 4]           (every second element).
+a[1:5:2]        returns [1, 3]              (from index 1 to 5, every second element).
+a[::-1]         returns [5, 4, 3, 2, 1, 0]  (the entire list in reverse).
+
+
+Negative Indices
+Negative indices can be used to count from the end of the sequence:
+
+a[-1]       returns the last element.
+a[-3:]      returns the last three elements.
+a[:-2]      returns all elements except the last two.
+
+Examples with Negative Indices
+a[-1]       returns 5               (the last element).
+a[-3:]      returns [3, 4, 5]       (the last three elements).
+a[:-2]      returns [0, 1, 2, 3]    (all elements except the last two).
